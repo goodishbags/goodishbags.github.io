@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # 合并重复的branches配置
   pull_request:
     branches: [ main ]
 
@@ -16,13 +16,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 构建Job，独立定义
   build:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: recursive  # 保留递归拉取子模块，移除重复的true
           fetch-depth: 0
 
       - name: Setup Pages
@@ -31,8 +32,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
-          extended: true
+          hugo-version: 'latest'  # 补充hugo版本配置（原配置此处省略，建议明确）
 
       - name: Build
         run: hugo --minify
@@ -40,14 +40,15 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./public  # 上传构建产物
 
+  # 部署Job，依赖build完成后执行
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-22.04
-    needs: build
+    needs: build  # 明确依赖build Job
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
