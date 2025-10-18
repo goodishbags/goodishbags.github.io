@@ -1,0 +1,24 @@
+baseURL = "https://goodishbags.github.io/"
+languageCode = "en-us"
+title = "My New Site"
+theme = "PaperMod"
+
+[params]
+    title = "My Blog"
+    description = "This is my personal blog"
+
+[menu]
+    [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+    [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
