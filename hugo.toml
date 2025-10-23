@@ -1,0 +1,195 @@
+# 核心配置
+baseURL = "https://wangjiacheng.com/"
+title = "WANGJIACHENG"
+theme = ["PaperMod"]  # 多主题支持（此处仅用PaperMod）
+timeout = "90s"
+
+# 分页配置（https://gohugo.io/templates/pagination/）
+[pagination]
+  pagerSize = 10
+
+# 构建选项
+enableRobotsTXT = true
+buildDrafts = false    # 不构建草稿
+buildFuture = false    # 不构建未来日期的文章
+buildExpired = false   # 不构建已过期的文章
+
+# 语言相关
+hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
+
+# 压缩配置
+[minify]
+  disableXML = true    # 不压缩XML文件
+  minifyOutput = true  # 压缩输出内容
+
+# 分类法（仅启用分类，禁用标签）
+[taxonomies]
+  category = "categories"  # 你原有的分类配置
+  social = "socials"       # 新增这一行，适配 Hugo 废弃变量
+
+# 第三方服务
+[services]
+  # RSS配置
+  [services.rss]
+    limit = 20  # RSS最大显示文章数
+  # Disqus评论（需确保shortname正确）
+  [services.disqus]
+    shortname = "WANGJIACHENG"
+
+# 主题参数（PaperMod核心配置）
+[params]
+  env = "production"  # 生产环境（启用GA、OpenGraph等）
+  title = "WANGJIACHENG"
+  description = "Personal Blog of wangjiacheng/Andy"
+  keywords = ["Blog"]
+  
+  # 作者信息（已修正邮箱格式：# → @）
+  [params.author]
+    name = "Andy"
+    email = "goodishbags@gmail.com"
+  
+  # 封面图（OpenGraph/Twitter卡片使用）
+  images = ["<link or path of image for opengraph, twitter-cards>"]  # 替换为实际图片链接
+  
+  # 日期格式（Go语言日期格式，无需修改）
+  DateFormat = "January 2, 2006"
+  
+  # 主题切换
+  defaultTheme = "auto"  # 自动（跟随系统）/ dark（深色）/ light（浅色）
+  disableThemeToggle = false  # 启用主题切换按钮
+  
+  # 文章显示选项
+  ShowReadingTime = true    # 显示阅读时间
+  ShowShareButtons = false  # 隐藏分享按钮
+  ShowPostNavLinks = true   # 显示上一篇/下一篇导航
+  ShowPageNums = true       # 显示页码
+  ShowBreadCrumbs = true    # 显示面包屑导航
+  ShowCodeCopyButtons = false  # 隐藏代码复制按钮
+  ShowWordCount = false     # 隐藏字数统计
+  ShowRssButtonInSectionTermList = true  # 在分类页显示RSS按钮
+  ShowFullTextinRSS = true  # RSS显示全文
+  UseHugoToc = true         # 使用Hugo自带目录
+  disableSpecial1stPost = false  # 不特殊处理第一篇文章
+  disableScrollToTop = false  # 启用回到顶部按钮
+  comments = true           # 启用评论（依赖Disqus）
+  hidemeta = false          # 不隐藏元信息（日期、作者等）
+  hideSummary = true        # 列表页隐藏文章摘要
+  hideAuthor = true         # 隐藏作者信息
+  showtoc = false           # 不显示目录
+  tocopen = false           # 目录默认折叠
+
+  # 静态资源（替换为你的实际资源链接）
+  [params.assets]
+    favicon = "<link / abs url>"         # 网站图标
+    favicon16x16 = "<link / abs url>"    # 16x16图标
+    favicon32x32 = "<link / abs url>"    # 32x32图标
+    apple_touch_icon = "<link / abs url>"# Apple触摸图标
+    safari_pinned_tab = "<link / abs url>"# Safari固定标签图标
+
+  # 顶部导航栏标签
+  [params.label]
+    text = "🐭Andy"               # 文字内容
+    icon = "/apple-touch-icon.png"# 图标路径（与assets中一致）
+    iconHeight = 35              # 图标高度
+
+  # 个人资料模式（当前禁用）
+  [params.profileMode]
+    enabled = false              # 启用需设为true
+    title = "ExampleSite"
+    subtitle = "This is subtitle"
+    imageUrl = "<img location>"  # 头像链接
+    imageWidth = 120             # 头像宽度
+    imageHeight = 120            # 头像高度
+    imageTitle = "my image"      # 头像alt文本
+    [[params.profileMode.buttons]]  # 按钮列表（数组格式）
+      name = "Posts"
+      url = "posts"
+    [[params.profileMode.buttons]]
+      name = "Tags"
+      url = "tags"
+
+  # 首页信息模式（启用）
+  [params.homeInfoParams]
+    Title = "Hi there 👋"        # 首页标题（表情可用）
+    Content = "Welcome to my blog"  # 首页描述
+
+  # 社交图标（数组格式，支持PaperMod内置图标）
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/goodishbags"
+  [[params.socialIcons]]
+    name = "instagram"
+    url = "https://www.instagram.com/andy_ywang/"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:goodishbags@gmail.com"
+
+  # 搜索引擎验证（按需填写）
+  [params.analytics]
+    [params.analytics.google]
+      SiteVerificationTag = ""  # Google站点验证标签
+    [params.analytics.bing]
+      SiteVerificationTag = ""  # Bing站点验证标签
+    [params.analytics.yandex]
+      SiteVerificationTag = ""  # Yandex站点验证标签
+
+  # 封面图设置
+  [params.cover]
+    hidden = true           # 全局隐藏（但保留结构化数据）
+    hiddenInList = true     # 列表页隐藏
+    hiddenInSingle = true   # 文章页隐藏
+
+  # 编辑文章链接（替换为你的仓库路径）
+  [params.editPost]
+    URL = "https://github.com/goodishbags/goodishbags.github.io/content"  # 你的content目录链接
+    Text = "Suggest Changes"  # 按钮文字
+    appendFilePath = true     # 自动拼接文章路径
+
+  # 搜索配置（Fuse.js选项）
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    limit = 10  # 搜索结果最大数量
+    keys = ["title", "permalink", "summary", "content"]  # 搜索字段
+
+# 导航菜单（数组格式）
+[[menu.main]]
+  identifier = "posts"
+  name = "posts"
+  url = "/posts/"
+  weight = 5  # 权重（越小越靠前）
+[[menu.main]]
+  identifier = "categories"
+  name = "categories"
+  url = "/categories/"
+  weight = 10
+[[menu.main]]
+  identifier = "about"
+  name = "about"
+  url = "/about"
+  weight = 20
+[[menu.main]]
+  identifier = "now"
+  name = "now"
+  url = "/now"
+  weight = 30
+
+# 代码高亮（使用Chroma，适配PaperMod）
+pygmentsUseClasses = true  # 使用自定义CSS类高亮
+[markup]
+  # 代码高亮配置
+  [markup.highlight]
+    noClasses = false  # 启用自定义类（与pygmentsUseClasses配合）
+    # anchorLineNos = true  # 显示行号锚点（按需启用）
+    # codeFences = true     # 启用代码块（默认开启）
+    # guessSyntax = true    # 自动识别语法（默认开启）
+    # lineNos = true        # 显示行号（按需启用）
+    # style = "monokai"     # 高亮主题（按需修改）
+  # Goldmark渲染器（支持HTML内嵌）
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # 允许文章中使用HTML标签（重要！）
