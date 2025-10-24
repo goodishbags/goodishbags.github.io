@@ -27,15 +27,6 @@ hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
   category = "categories"  # 你原有的分类配置
   social = "socials"       # 新增这一行，适配 Hugo 废弃变量
 
-# 第三方服务
-[services]
-  # RSS配置
-  [services.rss]
-    limit = 20  # RSS最大显示文章数
-  # Disqus评论（需确保shortname正确）
-  [services.disqus]
-    shortname = "WANGJIACHENG"
-
 # 主题参数（PaperMod核心配置）
 [params]
   env = "production"  # 生产环境（启用GA、OpenGraph等）
@@ -67,11 +58,11 @@ hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
   ShowCodeCopyButtons = false  # 隐藏代码复制按钮
   ShowWordCount = false     # 隐藏字数统计
   ShowRssButtonInSectionTermList = true  # 在分类页显示RSS按钮
-  ShowFullTextinRSS = true  # RSS显示全文
+  ShowFullTextinRSS = false  # RSS显示全文
   UseHugoToc = true         # 使用Hugo自带目录
   disableSpecial1stPost = false  # 不特殊处理第一篇文章
   disableScrollToTop = false  # 启用回到顶部按钮
-  comments = true           # 启用评论（依赖Disqus）
+  comments = false           # 启用评论（依赖Disqus）
   hidemeta = false          # 不隐藏元信息（日期、作者等）
   hideSummary = true        # 列表页隐藏文章摘要
   hideAuthor = true         # 隐藏作者信息
