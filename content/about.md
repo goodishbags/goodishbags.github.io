@@ -2,7 +2,6 @@
 title: "About"
 layout: "about"
 url: "/about/"
-ShowReadingTime: false
 ---
 
 Hi, I'm Andy 👋  
