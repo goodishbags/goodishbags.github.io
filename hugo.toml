@@ -70,12 +70,14 @@ hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
   tocopen = false           # 目录默认折叠
 
   # 静态资源（替换为你的实际资源链接）
-  [params.assets]
-    favicon = "<link / abs url>"         # 网站图标
-    favicon16x16 = "<link / abs url>"    # 16x16图标
-    favicon32x32 = "<link / abs url>"    # 32x32图标
-    apple_touch_icon = "<link / abs url>"# Apple触摸图标
-    safari_pinned_tab = "<link / abs url>"# Safari固定标签图标
+[assets]
+# disableHLJS: true # to disable highlight.js
+# disableFingerprinting: true
+# favicon = "<link / abs url>"
+# favicon16x16 = "<link / abs url>"
+# favicon32x32 = "<link / abs url>"
+# apple_touch_icon = "<link / abs url>"
+# safari_pinned_tab = "<link / abs url>"
 
   # 顶部导航栏标签
   [params.label]
