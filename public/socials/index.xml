@@ -3,7 +3,12 @@
   <channel>
     <title>Socials on WANGJIACHENG</title>
     <link>http://localhost:1313/socials/</link>
-    <description>Personal Blog of wangjiacheng/Andy</description>
+    <description>Personal Blog of WANGJIACHENG/Andy</description>
+    <image>
+      <title>WANGJIACHENG</title>
+      <url>https://wangjiacheng.com/og-image.png</url>
+      <link>https://wangjiacheng.com/og-image.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>goodishbags@gmail.com (Andy)</managingEditor>

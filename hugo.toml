@@ -5,8 +5,7 @@ theme = ["PaperMod"]  # 多主题支持（此处仅用PaperMod）
 timeout = "90s"
 
 # 分页配置（https://gohugo.io/templates/pagination/）
-[pagination]
-  pagerSize = 10
+paginate = 10  # 替换原有的[pagination]配置
 
 # 构建选项
 enableRobotsTXT = true
@@ -22,6 +21,7 @@ hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
   disableXML = true    # 不压缩XML文件
   minifyOutput = true  # 压缩输出内容
 
+
 # 分类法（仅启用分类，禁用标签）
 [taxonomies]
   category = "categories"  # 你原有的分类配置
@@ -29,18 +29,15 @@ hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
 
 # 主题参数（PaperMod核心配置）
 [params]
-  env = "production"  # 生产环境（启用GA、OpenGraph等）
-  title = "WANGJIACHENG"
-  description = "Personal Blog of wangjiacheng/Andy"
+  env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+  title = "WANG JIA CHENG"
+  description = "Personal Blog of WANGJIACHENG/Andy"
   keywords = ["Blog"]
-  
-  # 作者信息（已修正邮箱格式：# → @）
-  [params.author]
-    name = "Andy"
-    email = "goodishbags@gmail.com"
+  author = { name = "Andy", email = "goodishbags@gmail.com" }
+  # author: ["Me", "You"] # multiple authors
   
   # 封面图（OpenGraph/Twitter卡片使用）
-  images = ["<link or path of image for opengraph, twitter-cards>"]  # 替换为实际图片链接
+  images = ["https://wangjiacheng.com/og-image.png"]  # 示例，替换为你的图片路径
   
   # 日期格式（Go语言日期格式，无需修改）
   DateFormat = "January 2, 2006"
