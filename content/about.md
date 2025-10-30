@@ -19,6 +19,4 @@ url: "/about/"
 ### Changelog
 
 - 2025.10:Created this blog
-=======
-You can reach me via [email](mailto:goodishbags@gmail.com) or find me on [GitHub](https://github.com/goodishbags).
->>>>>>> 73a57df8bcb2e8f693703f510c66ee2d0eacfca6
+
