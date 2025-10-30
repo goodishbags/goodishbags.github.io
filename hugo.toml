@@ -5,7 +5,8 @@ theme = ["PaperMod"]  # 多主题支持（此处仅用PaperMod）
 timeout = "90s"
 
 # 分页配置（https://gohugo.io/templates/pagination/）
-paginate = 10  # 替换原有的[pagination]配置
+[pagination]
+  pagerSize = 10  # 这里的 10 是你原来的分页数量，保持不变即可
 
 # 构建选项
 enableRobotsTXT = true
