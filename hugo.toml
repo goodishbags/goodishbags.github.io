@@ -150,22 +150,22 @@ hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
 # 导航菜单（数组格式）
 [[menu.main]]
   identifier = "posts"
-  name = "动态"
+  name = "posts"
   url = "/posts/"
   weight = 5  # 权重（越小越靠前）
 [[menu.main]]
   identifier = "categories"
-  name = "分类"
+  name = "categories"
   url = "/categories/"
   weight = 10
 [[menu.main]]
   identifier = "about"
-  name = "关于"
+  name = "about"
   url = "/about"
   weight = 20
 [[menu.main]]
   identifier = "now"
-  name = "此刻"
+  name = "now"
   url = "/now"
   weight = 30
 
