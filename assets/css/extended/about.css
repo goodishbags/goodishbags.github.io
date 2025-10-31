@@ -1,7 +1,6 @@
-/* 链接下划线改为黑色 */
 .about-page .post-content a:not(.anchor) {
-  border-bottom: solid 2px #000; /* 黑色实线 */
-  background-image: linear-gradient(to top, #000, #000); /* 背景渐变也改为黑色 */
+  border-bottom: solid 2px var(--purple);
+  background-image: linear-gradient(to top, var(--purple), var(--purple));
 }
 
 .about-page .post-content ul {

@@ -1,6 +1,6 @@
 # 核心配置
 baseURL = "https://wangjiacheng.com/"
-title = "WANGJIACHENG - Hakuna Matata"
+title = "Andy's Life"
 theme = ["PaperMod"]  # 多主题支持（此处仅用PaperMod）
 timeout = "90s"
 
@@ -102,7 +102,7 @@ hasCJKLanguage = true  # 启用中日韩语言支持（优化排版）
   # 首页信息模式（启用）
   [params.homeInfoParams]
     Title = "Hi there 👋"        # 首页标题（表情可用）
-    Content = "Hakuna Matata"  # 首页描述
+    Content = "💖Hakuna Matata"  # 首页描述
 
   # 社交图标（数组格式，支持PaperMod内置图标）
   [[params.socialIcons]]
